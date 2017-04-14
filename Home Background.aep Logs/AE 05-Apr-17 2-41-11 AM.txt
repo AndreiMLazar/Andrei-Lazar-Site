@@ -1,0 +1,12 @@
+Adobe After Effects v13.7 Windows 64 render log for project “Home Background.aep”
+
+Rendering started on 05-Apr-17 at 2:41:11 AM
+
+  05-Apr-17 2:41:11 AM: Starting composition “LA”.
+
+  Output To: D:\LA.avi    05-Apr-17 2:42:14 AM: Finished composition “LA”.
+
+
+  Total Time Elapsed: 1 Min, 3 Sec
+Log closed on 05-Apr-17 at 2:42:14 AM
+
