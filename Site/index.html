@@ -23,9 +23,9 @@
   <meta name="geo.position" content="44.426767;26.102538" />
   <meta name="ICBM" content="44.426767, 26.102538" />
   <!-- App Specifics -->
-  <meta name="msapplication-TileColor" content="#e0e0e0">
+  <meta name="msapplication-TileColor" content="#5080C9">
   <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#e0e0e0">
+  <meta name="theme-color" content="#5080C9">
   <!-- Author -->
   <link rel="canonical" title="Andrei Lazar - Front-End Web Developer" href="http://mysite.com/" />
   <link rel="author" href="https://www.facebook.com/AndreiMLazar" />
@@ -34,6 +34,7 @@
   <link rel="me" href="sms:+40768536688">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
   <!-- External CSS -->
   <link rel="stylesheet" href="css/pure-min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -68,10 +69,7 @@
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:image" content="img/ms-icon-310x310.png" />
   <meta property="og:url" content="http://www.AndreiLazar.net" />
-  <meta property="og:description" content="Web solutions. Crafting visually stunning websites and interfaces." />
-  <meta name="msapplication-TileColor" content="#e0e0e0">
-  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-  <meta name="theme-color" content="#fafafa"> </head>
+  <meta property="og:description" content="Web solutions. Crafting visually stunning websites and interfaces." /> </head>
 
 <body>
   <!--[if lte IE 8]>
@@ -85,7 +83,10 @@
       <div class="custom-wrapper pure-g" id="menu">
         <div class="pure-u-1 pure-u-md-1-3">
           <div class="pure-menu">
-            <a class="pure-menu-heading" href=""><img class="logo" width="50px" height="50px" alt="Andrei Lazar Logo" href="img/ms-icon-310x310.png"></a> <a href="#" class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar2"></span><span class="bar3"></span></a> </div>
+            <a class="pure-menu-heading" href=""><img class="logo" width="50px" height="50px" alt="Andrei Lazar Logo" href="img/ms-icon-310x310.png">
+              <div class="logo-description"><span>Andrei Lazar</span>
+                <br><span style="letter-spacing: -.055em; font-size: 12px; font-weight: 600; margin-left: -6px;">Front-End Web Developer</span></div>
+            </a> <a href="#" class="custom-toggle" id="toggle"><span class="bar"></span><span class="bar2"></span><span class="bar3"></span></a> </div>
         </div>
         <div class="pure-u-1 pure-u-md-1-3">
           <div class="pure-menu pure-menu-horizontal custom-can-transform">
@@ -100,32 +101,55 @@
         <div class="pure-u-1 pure-u-md-1-3">
           <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
             <ul class="pure-menu-list">
-              <li class="pure-menu-item">
-                <a href="#" class="pure-menu-link">
-                  <div class="cta-button">Hire me</div>
-                </a>
-              </li>
+              <li class="pure-menu-item"> <a href="#EN" class="pure-menu-link" id="language">
+                  RO
+                </a> </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="menu-divider"></div>
     </nav>
-    <div class="splash">
-      <div class="left"></div>
-    </div>
+    <main class="pure-g header">
+      <div class="pure-u-1 pure-u-md-2-5 header-text">
+        <h1>Web Solutions.</h1>
+        <div class="slogan-box">
+          <h2>Crafting visually stunning websites and interfaces.</h2>
+          <a href="#">
+            <div class="cta-button">Hire me</div>
+          </a>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-3-5"> <span class="phone"><img src="img/phone.png"></span> </div>
+    </main>
+    <section id="arrowhead" class="arrow"> <a href="#About"><span></span></a> </section>
   </section>
-  <section id="About"> </section>
-  <div id="main" class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="section-ajax">
-          <h1 class="page-header">Ajax call</h1> <a class="btn btn-action btn-primary" data-action="load">Simulate Ajax call</a> </div>
-        <div id="section-position">
-          <h1 class="page-header">Bar position <small>top</small></h1> <a class="btn btn-action btn-warning" data-action="position" data-position="top" data-direction="width">Top</a> <a class="btn btn-action btn-warning" data-action="position" data-position="bottom" data-direction="width">Bottom</a> <a class="btn btn-action btn-warning" data-action="position" data-position="left" data-direction="height">Left</a> <a class="btn btn-action btn-warning" data-action="position" data-position="right" data-direction="height">Right</a> </div>
+  <section id="About">
+    <div class="pure-g" style="height: 20vh;">
+      <div class="pure-u-1-8"> </div>
+      <div class="pure-u-3-8">
+        <div class="chapter">02<span class="chapter-divider"></span>About</div>
       </div>
     </div>
-  </div>
+    <div class="pure-g aboutme">
+      <div class="pure-u-1-8"> </div>
+      <div class="pure-u-3-8">
+        <div class="photo" data-tilt><img src="img/photo.jpg" alt="Andrei Lazar Photo">
+          <div class="photo-overlay"></div>
+          <div class="photo-text">
+            <p>Hi<span style="color: #348ac7; font-size: 1.2em;">.</span></p>
+            <p>I am Andrei.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pure-u-2-8" id="aboutmetext">
+        <h3><p>I am a Front-End Developer with main focus on Branding and Website Creation, located in Bucharest, Romania.<br></p>
+
+<p>Throughout my 2 year experience I have worked with various local businesses as a Freelancing Front-End Developer. <br></p>
+
+<p>I am always glad to discuss new ideas and implement them.</p></h3> </div>
+    </div>
+  </section>
   <script>
     (function (window, document) {
       var menu = document.getElementById('menu')
@@ -161,6 +185,35 @@
       });
       window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     })(this, this.document);
+  </script>
+  <script type="text/javascript">
+    var $root = $('html, body');
+    $('a[href^="#"]').click(function () {
+      var href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top
+      }, 500, function () {
+        window.location.hash = href;
+      });
+      return false;
+    });
+  </script>
+  <script type="text/javascript" src="js/tilt.jquery.js"></script>
+  <script type='text/javascript'>
+    jQuery(document).ready(function ($) {
+      $('.photo').tilt({
+        maxTilt: 30
+        , perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+        easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+        scale: 1, // 2 = 200%, 1.5 = 150%, etc..
+        speed: 1000, // Speed of the enter/exit transition.
+        transition: true, // Set a transition on enter/exit.
+        reset: true, // If the tilt effect has to be reset on exit.
+        glare: true, // Enables glare effect
+        maxGlare: 0.7 // From 0 - 1.
+          
+      , });
+    });
   </script>
 </body>
 
