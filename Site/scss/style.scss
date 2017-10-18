@@ -46,6 +46,10 @@ $grad1light: #348ac7;
   background: #79b;
 }
 
+html {
+  height: 100%;
+}
+
 
 /* Mixin */
 
@@ -624,7 +628,7 @@ a.pure-button-primary {
 #About {
   position: relative;
   display: block;
-  height: 300vh;
+  height: auto;
   background: #1c1c2e;
   background: -moz-linear-gradient(30deg, #1c1c2e 0%, #0b1C34 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #1c1c2e), color-stop(100%, #0b1c34));
@@ -726,84 +730,13 @@ a.pure-button-primary {
   }
 }
 
-@media (min-width: 48em) {
-  body {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width:1201px) {
-  section {
-    border-radius: 2px;
-  }
-  #Home,
-  #About {
-    box-shadow: -1px 1px 40px rgba(0, 0, 0, .7) !important;
-    border: 1px solid $black;
-  }
-  #Home {
-    margin: 3vh auto 0vh auto;
-    height: 97vh;
-  }
-  body {
-    margin: 3vh auto 3vh auto;
-    max-width: 97vw !important;
-    transition: 1s ease;
-    background-color: #222;
-  }
-}
-
-@media screen and ( max-width: 1200px) {
-  .header {
-    padding: 10vh 0;
-  }
-  .pure-menu-link {
-    padding: .2em 1.2em;
-  }
-  #arrowhead a span {
-    margin-top: 0px;
-  }
-  #aboutmetext {
-    margin: 7vh auto;
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .phone img {
-    width: 60vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .pure-menu-item {
-    font-size: 1.1em;
-    padding-top: .4em;
-  }
-  .logo {
-    margin: 0 0 0 calc(50% - 25px - 90px);
-  }
-  .cta-button {
-    margin-top: -20px;
-    padding: 7.5px 0;
-  }
-  .header-text {
-    margin: 0 auto;
-    h1 {
-      width: 350px;
-    }
-  }
-  .slogan-box {
-    width: 350px;
-  }
-  #language {
-    margin-top: -6px;
-    color: $accent;
-  }
-}
-
 
 /* Common style */
+
+#Work {
+  height: auto;
+  padding: 0 0 50px 0;
+}
 
 .cards {
   margin: 12vh auto 0 auto;
@@ -834,7 +767,7 @@ a.pure-button-primary {
 }
 
 .cards figure:hover {
-  box-shadow: -1em 1em 1em rgba(0, 0, 0, .1);
+  box-shadow: -1em 1em 1.5em rgba(0, 0, 0, .1);
   transition: .3s ease;
 }
 
@@ -913,9 +846,14 @@ a.pure-button-primary {
   height: 100%;
 }
 
-
 .cards svg path {
   fill: #e0e0e0;
+}
+
+.cards:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 
@@ -954,7 +892,83 @@ a.pure-button-primary {
 
 /* Media Queries */
 
-@media screen and (max-width: 58em) {
+@media (min-width: 48em) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width:1201px) {
+  section {
+    border-radius: 2px;
+  }
+  #Home,
+  #About {
+    box-shadow: -1px 1px 40px rgba(0, 0, 0, .7) !important;
+    border: 1px solid $black;
+  }
+  #Home {
+    margin: 3vh auto 0vh auto;
+    height: 97vh;
+  }
+  body {
+    margin: 3vh auto 3vh auto;
+    max-width: 97vw !important;
+    transition: 1s ease;
+    background-color: #222;
+  }
+}
+
+@media screen and ( max-width: 1200px) {
+  .header {
+    padding: 10vh 0;
+  }
+  .pure-menu-link {
+    padding: .2em 1.2em;
+  }
+  #arrowhead a span {
+    margin-top: 0px;
+  }
+  #aboutmetext {
+    margin: 7vh auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .phone img {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pure-menu-item {
+    font-size: 1.1em;
+    padding-top: .4em;
+  }
+  .logo {
+    margin: 0 0 0 calc(50% - 25px - 90px);
+  }
+  .cta-button {
+    margin-top: -20px;
+    padding: 7.5px 0;
+  }
+  .header-text {
+    margin: 0 auto;
+    h1 {
+      width: 350px;
+    }
+  }
+  .slogan-box {
+    width: 350px;
+  }
+  #language {
+    margin-top: -6px;
+    color: $accent;
+  }
+}
+
+@media screen and (max-width: 928px) {
   .cards a {
     width: 33.333%;
   }
@@ -963,7 +977,7 @@ a.pure-button-primary {
   }
 }
 
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 720px) {
   .cards {
     max-width: 500px;
   }
@@ -990,14 +1004,35 @@ a.pure-button-primary {
   }
 }
 
-@media screen and (max-width: 27em) {
+@media screen and (max-width: 432px) {
   .cards {
-    max-width: 250px;
+    width: 200px;
+    margin: 50px auto;
   }
+  
   .cards a {
     width: 100%;
   }
   .cards a:nth-child(even) {
-    margin: 20px 0 -10px 0;
+    margin: 40px 0 10px 0;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .header-text h1 {
+    margin-top: -20px;
+  }
+  .header .phone {
+    margin: 0;
+  }
+  .phone img {
+    position: absolute;
+    top: 28%;
+    left: 55%;
+    height: 160px;
+    opacity: .5;
+  }
+  .cards a {
+    width: 32%;
   }
 }
