@@ -533,7 +533,7 @@ a.pure-button-primary {
   background: -o-linear-gradient(left, #868ec9 0%, #83bfe3 100%);
   background: -ms-linear-gradient(left, #868ec9 0%, #83bfe3 100%);
   background: linear-gradient(to right, #868ec9 0%, #83bfe3 100%);
-  box-shadow: 0px 0px 6px 0px #868ec9;
+  box-shadow: 0px 0px 6px 1px $accent;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -649,7 +649,7 @@ a.pure-button-primary {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-shadow: inset 10px 10px 10px 1px rgba(51, 51, 51, 1);
-  margin: 12vh auto;
+  margin: 14vh auto 7vh auto;
 }
 
 .chapter-divider {
@@ -662,6 +662,15 @@ a.pure-button-primary {
   font-weight: 900;
   margin: 0 4px 0 8px;
   box-shadow: -1px 1px 4px $grad1light;
+}
+
+.chapter2 {
+  margin: 24vh auto 0vh auto;
+}
+
+.chapter2-divider {
+  background: linear-gradient(30deg, $grad1light 0%, $grad1dark 100%);
+  margin: 0 10px 0 10px;
 }
 
 .aboutme {
@@ -790,5 +799,205 @@ a.pure-button-primary {
   #language {
     margin-top: -6px;
     color: $accent;
+  }
+}
+
+
+/* Common style */
+
+.cards {
+  margin: 12vh auto 0 auto;
+  max-width: 770px;
+  width: 100%;
+  font-family: 'Raleway';
+}
+
+.cards a {
+  float: left;
+  max-width: 250px;
+  width: 33.3%;
+  color: #333;
+  margin: 0 10px;
+}
+
+.cards a:nth-child(odd) {
+  margin: 15px 0 -15px 0;
+}
+
+.cards figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0 5px;
+  background: #222;
+  box-shadow: -6px 4px 20px rgba(0, 0, 0, .4);
+  transition: .3s ease;
+}
+
+.cards figure:hover {
+  box-shadow: -1em 1em 1em rgba(0, 0, 0, .1);
+  transition: .3s ease;
+}
+
+.cards figure img {
+  position: relative;
+  display: block;
+  width: 100%;
+  opacity: .8;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.cards svg {
+  box-shadow: inset -1px 1px 10px rgba(0, 0, 0, .2);
+}
+
+.cards figcaption {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.cards figcaption h2 {
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: .2px;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: -2px 2px 4px rgba(51, 51, 51, .1);
+  font-weight: 600;
+  background: -webkit-linear-gradient(30deg, $grad1dark, $grad1light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 140%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.cards figcaption p {
+  padding: 0 6px;
+  color: #555;
+  line-height: 116%;
+  font-weight: 400;
+  letter-spacing: -.4px;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: opacity 0.2s, transform 0.3s;
+  text-shadow: -2px 2px 4px rgba(51, 51, 51, .1);
+}
+
+.cards figcaption h2,
+.cards figcaption p {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.cards figcaption,
+.cards figcaption h2,
+.cards figcaption p,
+.cards figure button {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+/* Style for SVG */
+
+.cards svg {
+  position: absolute;
+  top: -1px;
+  /* fixes rendering issue in FF */
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+
+.cards svg path {
+  fill: #e0e0e0;
+}
+
+
+/* Hover effects */
+
+.cards a:hover figure img {
+  opacity: 1;
+  filter: contrast(105%);
+}
+
+.cards a:hover figcaption h2,
+.cards a:hover figcaption p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.cards a:hover figcaption p {
+  opacity: 0;
+}
+
+#icon {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: calc(50% - 75px);
+  top: calc(50% - 40px);
+  z-index: 10;
+  max-width: 140px;
+  max-height: 140px;
+}
+
+#icon img:hover {
+  filter: contrast(10%);
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 58em) {
+  .cards a {
+    width: 33.333%;
+  }
+  .cards a {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .cards {
+    max-width: 500px;
+  }
+  .cards a {
+    width: 50%;
+  }
+  .cards a:nth-child(even) {
+    margin: 200px 0 -200px 0;
+  }
+  .cards a:nth-child(1) {
+    margin-top: 0;
+  }
+  .chapter2 {
+    margin-top: 40px;
+  }
+  .cards figcaption h2 {
+    margin-bottom: 0px;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  .cards figcaption p {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 27em) {
+  .cards {
+    max-width: 250px;
+  }
+  .cards a {
+    width: 100%;
+  }
+  .cards a:nth-child(even) {
+    margin: 20px 0 -10px 0;
   }
 }

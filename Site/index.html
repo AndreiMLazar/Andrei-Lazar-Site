@@ -36,11 +36,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
   <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/grids-responsive-min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- JavaScript -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/snap.svg-min.js"></script>
   <noscript>
     <!--no JS alternative-->
   </noscript>
@@ -75,9 +78,6 @@
   <!--[if lte IE 8]>
           <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
       <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="css/grids-responsive-min.css">
-  <!--<![endif]-->
   <section id="Home">
     <nav>
       <div class="custom-wrapper pure-g" id="menu">
@@ -125,7 +125,7 @@
     <section id="arrowhead" class="arrow"> <a href="#About"><span></span></a> </section>
   </section>
   <section id="About">
-    <div class="pure-g" style="height: 20vh;">
+    <div class="pure-g">
       <div class="pure-u-1-8"> </div>
       <div class="pure-u-3-8">
         <div class="chapter">02<span class="chapter-divider"></span>About</div>
@@ -149,11 +149,75 @@
 
 <p>I am always glad to discuss new ideas and implement them.</p></h3> </div>
     </div>
+    <section id="Work">
+      <div class="pure-g">
+        <div style="margin: 0 auto">
+          <div class="chapter chapter2">03<span class="chapter-divider chapter2-divider"></span>Work</div>
+        </div>
+      </div>
+      <div id="cards" class="cards clearfix">
+        <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+          <figure> <img src="img/back.jpg" /><img src="img/branding-icon.png" id="icon" alt="Website Design Icon">
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+            <figcaption>
+              <h2>Branding</h2>
+              <p>Creating the visual experience someone has in mind when thinking about your company.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+          <figure> <img src="img/back.jpg" /><img src="img/website-design-icon.png" id="icon" alt="Website Design Icon">
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+            <figcaption>
+              <h2>Website Design</h2>
+              <p>Forging unique ideas into a layout which contains all the features you want.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+          <figure> <img src="img/back.jpg" /><img src="img/website-creation-icon.png" id="icon" alt="Website Creation Icon">
+            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+            <figcaption>
+              <h2>Website Creation</h2>
+              <p>Bringing the concept to life while implementing responsive design for mobile users.</p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </section>
   </section>
   <script>
-    (function (window, document) {
-      var menu = document.getElementById('menu')
-        , WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
+    (function () {
+      function init() {
+        var speed = 220
+          , easing = mina.ease;
+					[].slice.call(document.querySelectorAll('#cards > a')).forEach(function (el) {
+          var s = Snap(el.querySelector('svg'))
+            , path = s.select('path')
+            , pathConfig = {
+              from: path.attr('d')
+              , to: el.getAttribute('data-path-hover')
+            };
+          el.addEventListener('mouseenter', function () {
+            path.animate({
+              'path': pathConfig.to
+            }, speed, easing);
+          });
+          el.addEventListener('mouseleave', function () {
+            path.animate({
+              'path': pathConfig.from
+            }, speed, easing);
+          });
+        });
+      }
+      init();
+    })();
+  </script>
+  <script>
+    (function (window, ddId('menu'), WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
 
       function toggleHorizontal() {
           [].forEach.call(document.getElementById('menu').querySelectorAll('.custom-can-transform'), function (el) {
@@ -182,8 +246,7 @@
       document.getElementById('toggle').addEventListener('click', function (e) {
         toggleMenu();
         e.preventDefault();
-      });
-      window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+      }); window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     })(this, this.document);
   </script>
   <script type="text/javascript">
