@@ -1,32 +1,26 @@
 <?php
-if( isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['telephone']) && isset($_POST['email']) &&  isset($_POST['message']) ){
-	$f = $_POST['fname']; // HINT: use preg_replace() to filter the data
-    $l = $_POST['lname'];
-    $tel = $_POST['telephone'];
-    $email = $_POST['email'];
-	$message = nl2br($_POST['message']);
-	$to = "scorppion2005@yahoo.com";	
-	$from = $email;
-	$subject = 'Ati completat o cerere pe AndreiLazar.net .';
-	$message = '<b>Name:</b> '.$f.' '.$l.' <br><b>Mail:</b> '.$email.' <br><b>Telephone:</b> '.$tel.' <p><b>Message </b>'.$message.'</p>';
-  
-    $send = '<html><body>';
-    $send .= '<img src="http://milie37.000webhostapp.com/img/MihaelaIlieLogoMic.jpg" alt="Mihaela Ilie" />';
-    $send .= '<table rules="all" style="border: solid 3px #253340; border-radius: 2px; border-spacing: 0;" cellpadding="10">';
-    $send .= "<tr><td  style='background: #E5E5E5; color: #081727; padding: 2px;'><strong>Nume:</strong> </td><td style='background: #081727; color: #E5E5E5; padding: 2px;'>".$f." ".$l."</td></tr>";
-    $send .= "<tr><td  style='background: #E5E5E5; color: #081727; padding: 2px;'><strong>Numar de telefon:</strong> </td><td style='background: #081727; color: #E5E5E5; padding: 2px;'>".$tel."</td></tr>";
-    $send .= "<tr><td  style='background: #E5E5E5; color: #081727; padding: 2px;'><strong>Mail:</strong> </td><td style='background: #081727; color: #E5E5E5; padding: 2px;'>".$email."</td></tr>";
-    $send .= "<tr><td  style='background: #E5E5E5; color: #081727; padding: 2px;'><strong>Tipul de firma:</strong> </td><td style='background: #081727; color: #E5E5E5; padding: 2px;'>".$tipfirma."</td></tr>";
-    $send .= "<tr><td  style='background: #E5E5E5; color: #081727; padding: 2px;'><strong>Comentarii:</strong> </td><td style='background: #081727; color: #E5E5E5; padding: 2px;'>".$comentarii."</td></tr>";
-    $send .= "</table>";
-    $send .= "</body></html>";
-	$headers = "From: $from\n";
-	$headers .= "MIME-Version: 1.0\n";
-	$headers .= "Content-type: text/html; charset=iso-8859-1\n";
-	if( mail($to, $subject, $send, $headers)){
-		echo "Succes.";
-	} else {
-		echo "Mesajul nu s-a putut trimite. Va rugam incercati mai tarziu.";
-	}
-}
+include_once('db.php');
+// Sanitize post vars
+$fname=mysqli_real_escape_string($con, $_POST['fname1']);
+$fnameclean = filter_var($fname, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$lname=mysqli_real_escape_string($con, $_POST['lname1']);
+$lnameclean = filter_var($lname, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$email=mysqli_real_escape_string($con, $_POST['email1']);
+$emailclean = filter_var($email, FILTER_SANITIZE_EMAIL, FILTER_FLAG_STRIP_HIGH);
+$message=mysqli_real_escape_string($con, $_POST['message11']);
+$messageclean = filter_var($message1, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+// Insert into DB
+mysqli_query($con, "INSERT INTO contact('First', 'Last', 'Mail', 'Message') VALUES ('$fnameclean', '$lnameclean', '$emailclean', '$messageclean')");
+// Headers
+$headers .= "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+$headers = 'From: <andreimhlazar@gmail.com>' . "\r\n";
+// Mail Details
+$to = "andreimhlazar@gmail.com";	
+$from = $email;
+$subject = 'Ati completat o cerere pe AndreiLazar.net .';
+$messagemail = nl2br($_POST['message']);
+// Send
+mail($to, $subject, $messagemail, $headers);
+$con->close();
 ?>
