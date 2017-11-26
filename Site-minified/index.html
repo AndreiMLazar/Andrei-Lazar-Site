@@ -79,23 +79,23 @@
   <!--[if lte IE 8]><link href=css/grids-responsive-old-ie-min.css rel=stylesheet><![endif]-->
   <aside id="hire-form"> <span id="overlay"></span>
     <div id="modal"> <span id="close-button">X</span>
-      <h1>Hire me<span class=chapter-divider></span>Form</h1>
+      <h1 id="hire1">Hire me</h1><span class=chapter-divider></span><span id="hire2">Form</span>
       <form class="pure-form pure-form-aligned" id="form" onsubmit="submitForm();" action="parser.php" method="post">
         <fieldset>
           <div class="pure-control-group">
-            <label for="fname">First Name:</label>
+            <label for="fname" id="form1">First Name:</label>
             <input id="fname" type="text" placeholder="First Name"> </div>
           <div class="pure-control-group">
-            <label for="lname">Last Name:</label>
+            <label for="lname" id="form2">Last Name:</label>
             <input id="lname" type="text" placeholder="Last Name"> </div>
           <div class="pure-control-group">
-            <label for="email">Mail Address:</label>
+            <label for="email" id="form3">Mail Address:</label>
             <input id="email" type="email" placeholder="Mail"> </div>
           <div class="pure-control-group">
-            <label for="telephone">Telephone:</label>
+            <label for="telephone" id="form4">Telephone:</label>
             <input id="telephone" type="tel" placeholder="Number"> </div>
           <div class="pure-control-group">
-            <label for="message">Message:</label>
+            <label for="message" id="form5">Message:</label>
             <input id="message" type="text" placeholder="Your Message"> </div>
           <div class="pure-controls">
             <button type="submit" class="cta-button" id="submit">Submit</button>
@@ -293,6 +293,16 @@
       });
     });
   </script>
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:687917,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
   <script type="text/javascript" src="js/language.js"></script>
   <script>
     (function (window, ddId('menu'), WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
