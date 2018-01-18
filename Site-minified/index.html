@@ -12,7 +12,6 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-109262961-1');
-
     </script>
     <meta charset=utf-8>
     <meta content="ie=edge" http-equiv=x-ua-compatible>
@@ -74,30 +73,30 @@
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ22JK8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ22JK8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!--[if lte IE 8]><link href=css/grids-responsive-old-ie-min.css rel=stylesheet><![endif]-->
     <aside id="hire-form"> <span id="overlay"></span>
         <div id="modal"> <span id="close-button">X</span>
             <h1>Hire me<span class=chapter-divider></span>Form</h1>
-            <form class="pure-form pure-form-aligned" id="form" action="php/parser.php" method="post">
+            <form class="pure-form pure-form-aligned" id="form" onsubmit="sendForm(); return false;" action="php/parser.php">
                 <fieldset>
                     <div class="pure-control-group">
                         <label for="fname">First Name:</label>
-                        <input id="fname" type="text" name="fname" placeholder="First Name"> </div>
+                        <input id="fname" type="text" name="fname" value="" placeholder="First Name"> </div>
                     <div class="pure-control-group">
                         <label for="lname">Last Name:</label>
-                        <input id="lname" type="text" name="lname" placeholder="Last Name"> </div>
+                        <input id="lname" type="text" name="lname" placeholder="Last Name" value=""> </div>
                     <div class="pure-control-group">
                         <label for="email">Mail Address:</label>
-                        <input id="email" type="email" name="email" placeholder="Mail"> </div>
+                        <input id="email" type="email" name="email" placeholder="Mail" value=""> </div>
                     <div class="pure-control-group">
                         <label for="telephone">Telephone:</label>
-                        <input id="telephone" type="tel" name="telephone" placeholder="Number"> </div>
+                        <input id="telephone" type="tel" name="telephone" placeholder="Number" value=""> </div>
                     <div class="pure-control-group">
                         <label for="message">Message:</label>
-                        <input id="message" type="text" name="message" placeholder="Your Message"> </div>
+                        <input id="message" type="text" name="message" placeholder="Your Message" value=""> </div>
                     <div class="pure-controls">
                         <button type="submit" class="cta-button" id="submit" name="submit">Submit</button>
                     </div>
@@ -110,7 +109,8 @@
             <div class="pure-g custom-wrapper" id=menu>
                 <div class="pure-u-1 pure-u-md-1-3">
                     <div class=pure-menu>
-                        <a href="" class=pure-menu-heading><div class=logo href=img/logo.png height=50px width=50px></div>
+                        <a href="" class=pure-menu-heading>
+                            <div class=logo href=img/logo.png height=50px width=50px></div>
                             <div class=logo-description><span>Andrei Lazar</span>
                                 <br><span class="logo-description2">Front-End Web Developer</span></div>
                         </a><a href=# class=custom-toggle id=toggle><span class=bar></span><span class=bar2></span><span class=bar3></span></a></div>
@@ -169,8 +169,7 @@
                 <h3>
                     <p id="abouttext1">I am a Front-End Developer with main focus on Branding and Website Creation, located in Bucharest, Romania.<br>
                         <p id="abouttext2">Throughout my 2 year experience I have worked with various local businesses as a Freelancing Front-End Developer.<br>
-                            <p id="abouttext3">I am always glad to discuss new ideas and implement them.</h3>
-            </div>
+                            <p id="abouttext3">I am always glad to discuss new ideas and implement them.</h3> </div>
         </div>
         <section id=Work>
             <div class=pure-g>
@@ -182,7 +181,7 @@
                 <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure><img src=img/back.jpg alt="Dark Background"><img src=img/branding-icon.png alt="Website Design Icon" id=icon>
                         <svg viewBox="0 0 180 320" preserveAspectRatio=none>
-              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+                            <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
                         <figcaption>
                             <h2 id="branding1">Branding</h2>
                             <p id="branding2">Creating the visual experience someone has in mind when thinking about your company.</figcaption>
@@ -191,7 +190,7 @@
                 <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure><img src=img/back.jpg alt="Dark Background"><img src=img/website-design-icon.png alt="Website Design Icon" id=icon>
                         <svg viewBox="0 0 180 320" preserveAspectRatio=none>
-              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+                            <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
                         <figcaption>
                             <h2 id="design1">Website Design</h2>
                             <p id="design2">Forging unique ideas into a layout which contains all the features you want.</figcaption>
@@ -200,7 +199,7 @@
                 <a data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure><img src=img/back.jpg alt="Dark Background"><img src=img/website-creation-icon.png alt="Website Creation Icon" id=icon>
                         <svg viewBox="0 0 180 320" preserveAspectRatio=none>
-              <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
+                            <path d="M 180,160 0,218 0,0 180,0 z" /> </svg>
                         <figcaption>
                             <h2 id="creation1">Website Creation</h2>
                             <p id="creation2">Bringing the concept to life while implementing responsive design for mobile users.</figcaption>
@@ -223,24 +222,23 @@
                 <div class=pure-u-1-8></div>
                 <div class=pure-u-2-8>
                     <div class="chapter chapter2">05<span class="chapter-divider chapter2-divider"></span>Contact</div>
-                    <h3>Mihai Andrei Lazar<br><a href=mailto:AndreiMhLazar@gmail.com>AndreiMhLazar@gmail.com</a></h3>
-                </div>
+                    <h3>Mihai Andrei Lazar<br><a href=mailto:AndreiMhLazar@gmail.com>AndreiMhLazar@gmail.com</a></h3> </div>
                 <div class=pure-u-5-8>
                     <ul class=icons>
                         <li>
                             <a href=https://www.facebook.com/AndreiMLazar class=facebook target=_blank title=Facebook>
                                 <svg viewBox="0 0 512 512">
-                  <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z" /> </svg>
+                                    <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z" /> </svg>
                                 <!--[if lt IE 9]><em>Facebook</em><![endif]--></a>
                             <li>
                                 <a href=https://www.linkedin.com/in/mihai-andrei-lazar-3b10227b/ class=linkedin target=_blank title=LinkedIn>
                                     <svg viewBox="0 0 512 512">
-                    <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" /> </svg>
+                                        <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" /> </svg>
                                     <!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a>
                                 <li>
                                     <a href=https://github.com/AndreiMLazar class=github target=_blank title=Github>
                                         <svg viewBox="0 0 512 512">
-                      <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z" /> </svg>
+                                            <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z" /> </svg>
                                         <!--[if lt IE 9]><em>Behance</em><![endif]--></a>
                     </ul>
                 </div>
@@ -256,59 +254,78 @@
                 families: ["Open Sans:300,400,500,600,700,800", "Raleway:100,300,400"]
             }
         })
-
     </script>
     <script>
-        $('.cta-button').click(function() {
+        $('.cta-button').click(function () {
             $('#modal').css('z-index', 999);
             $('#hire-form').css('opacity', 100);
             $('#overlay').css('z-index', 998);
         });
-        $('#close-button').click(function() {
+        $('#close-button').click(function () {
             $('#hire-form').css('opacity', '0');
             $('#modal').css('z-index', '-1');
             $('#overlay').css('z-index', '-2');
         });
-        $('#overlay').click(function() {
+        $('#overlay').click(function () {
             $('#hire-form').css('opacity', '0');
             $('#overlay').css('z-index', -2);
         });
-
     </script>
-    <!--
     <script>
+        function sendForm() {
+            var first = document.getElementById("fname").value;
+            var last = document.getElementById("lname").value;
+            var number = document.getElementById("telephone").value;
+            var mail = document.getElementById("email").value;
+            var msg = document.getElementById("message").value;
+            var url = "php/parser.php";
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                // do something to response
+                console.log(this.responseText);
+            };
+            xhr.send("fname=" + first + "&lname=" + last + "&telephone=" + number + "&email=" + mail + "&message=" + msg);
+            console.log("fname=" + first + "&lname=" + last + "&telephone=" + number + "&email=" + mail + "&message=" + msg);
+        };
+        /*
         $(document).ready(function() {
             $("#submit").click(function() {
                 var fname = $("#fname").val();
                 var lname = $("#lname").val();
                 var email = $("#email").val();
                 var message = $("#message").val();
-                var dataString = 'fname1=' + fname + '&lname1=' + lname + '&email1=' + email + '&message1=' + message;
-                alert(fname + " lname " + lname + " mail " + email + " msg " + message + " data " + dataString);
+                var dataString = 
+                alert(dataString);
                 if (fname == '' || lname == '' || email == '' || message == '') {
                     $("#submit").text("Complete all fields, please.");
                 } else {
                     $.ajax({
                         type: "POST",
-                        url: "parser.php",
+                        url: "php/parser.php",
+                        dataType: "json",
                         data: dataString,
                         cache: false,
-                        success: function() {
-                            $("#submit").text("Succes!");
+                        success: function(data) {
+                            if (data.code == "200") {
+                            $("#submit").text("Succes!"); }
+                            else {
+                                $("#submit").text("Server failed!");
+                            }
                         }
                     });
                 }
                 return false;
             });
-        });
-
-    </script>-->
+        }); */
+    </script>
     <script type="text/javascript" src="js/language.js"></script>
     <script>
-        (function(window, ddId('menu'), WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
+        (function (window, ddId('menu'), WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
 
             function toggleHorizontal() {
-                [].forEach.call(document.getElementById('menu').querySelectorAll('.custom-can-transform'), function(el) {
+                [].forEach.call(document.getElementById('menu').querySelectorAll('.custom-can-transform'), function (el) {
                     el.classList.toggle('pure-menu-horizontal');
                 });
             };
@@ -318,7 +335,8 @@
                 // before the menu switches states
                 if (menu.classList.contains('open')) {
                     setTimeout(toggleHorizontal, 500);
-                } else {
+                }
+                else {
                     toggleHorizontal();
                 }
                 menu.classList.toggle('open');
@@ -330,38 +348,36 @@
                     toggleMenu();
                 }
             }
-            document.getElementById('toggle').addEventListener('click', function(e) {
+            document.getElementById('toggle').addEventListener('click', function (e) {
                 toggleMenu();
                 e.preventDefault();
             }); window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
         })(this, this.document);
-
     </script>
     <script>
-        ! function() {
+        ! function () {
             var e = mina.ease;
-            [].slice.call(document.querySelectorAll("#cards > a")).forEach(function(t) {
-                var a = Snap(t.querySelector("svg")).select("path"),
-                    n = {
-                        from: a.attr("d"),
-                        to: t.getAttribute("data-path-hover")
+            [].slice.call(document.querySelectorAll("#cards > a")).forEach(function (t) {
+                var a = Snap(t.querySelector("svg")).select("path")
+                    , n = {
+                        from: a.attr("d")
+                        , to: t.getAttribute("data-path-hover")
                     };
-                t.addEventListener("mouseenter", function() {
+                t.addEventListener("mouseenter", function () {
                     a.animate({
                         path: n.to
                     }, 220, e)
-                }), t.addEventListener("mouseleave", function() {
+                }), t.addEventListener("mouseleave", function () {
                     a.animate({
                         path: n.from
                     }, 220, e)
                 })
             })
         }()
-
     </script>
     <script>
         function toggleHorizontal() {
-            [].forEach.call(document.getElementById('menu').querySelectorAll('.custom-can-transform'), function(el) {
+            [].forEach.call(document.getElementById('menu').querySelectorAll('.custom-can-transform'), function (el) {
                 el.classList.toggle('pure-menu-horizontal');
             });
         };
@@ -371,7 +387,8 @@
             // before the menu switches states
             if (menu.classList.contains('open')) {
                 setTimeout(toggleHorizontal, 500);
-            } else {
+            }
+            else {
                 toggleHorizontal();
             }
             menu.classList.toggle('open');
@@ -383,50 +400,49 @@
                 toggleMenu();
             }
         }
-        document.getElementById('toggle').addEventListener('click', function(e) {
+        document.getElementById('toggle').addEventListener('click', function (e) {
             toggleMenu();
             e.preventDefault();
         });
-
     </script>
     <script>
         var $root = $("html, body");
-        $('a[href^="#"]').click(function() {
+        $('a[href^="#"]').click(function () {
             var o = $.attr(this, "href");
             return $root.animate({
                 scrollTop: $(o).offset().top
-            }, 500, function() {
+            }, 500, function () {
                 window.location.hash = o
             }), !1
         })
-
     </script>
     <script src=js/tilt.jquery.js></script>
     <script>
-        jQuery(document).ready(function(e) {
+        jQuery(document).ready(function (e) {
             e(".photo").tilt({
-                maxTilt: 30,
-                perspective: 1e3,
-                easing: "cubic-bezier(.03,.98,.52,.99)",
-                scale: 1,
-                speed: 1,
-                transition: !0,
-                reset: !0,
-                glare: !0,
-                maxGlare: .4
+                maxTilt: 30
+                , perspective: 1e3
+                , easing: "cubic-bezier(.03,.98,.52,.99)"
+                , scale: 1
+                , speed: 1
+                , transition: !0
+                , reset: !0
+                , glare: !0
+                , maxGlare: .4
             })
         })
         const tilt = $('.photo').tilt();
-
     </script>
     <script>
         if (/Edge\/\d./i.test(navigator.userAgent)) {
-            jQuery(document).ready(function(e) {
+            jQuery(document).ready(function (e) {
                 e(".photo").tilt({
-                    glare: false,
-                    maxGlare: 0
+                    glare: false
+                    , maxGlare: 0
                 })
             });
         }
-
     </script>
+</body>
+
+</html>
