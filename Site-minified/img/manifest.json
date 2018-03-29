@@ -1,5 +1,13 @@
 {
- "name": "App",
+ "name": "Andrei Lazar - Front End Developer",
+ "short_name": "AndreiLazar.Net",
+ "start_url": "https://AndreiLazar.net",
+ "display": "fullscreen",
+ "lang": "ro-RO",
+ "orientation": "portrait-primary",
+ "background_color": "#5080C9",
+ "theme_color": "#5080C9",
+ "description": "Front web developer Andrei Lazar's website.",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -36,6 +44,12 @@
    "sizes": "192x192",
    "type": "image\/png",
    "density": "4.0"
+  },
+  {
+   "src": "\/icon-512x512.png",
+   "sizes": "512x512",
+   "type": "image\/png",
+   "density": "12.0"
   }
  ]
 }
